@@ -1,6 +1,7 @@
 {
   "name": "@martians-sheep/layout-primitives",
   "version": "0.1.0",
+  "description": "Every Layout に基づいた React レイアウトコンポーネントライブラリ",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -19,6 +20,27 @@
   "sideEffects": [
     "**/*.css"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martians-sheep/layout-primitives.git"
+  },
+  "keywords": [
+    "react",
+    "layout",
+    "css",
+    "components",
+    "every-layout",
+    "intrinsic-design"
+  ],
+  "author": "martians-sheep",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/martians-sheep/layout-primitives/issues"
+  },
+  "homepage": "https://github.com/martians-sheep/layout-primitives#readme",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -26,7 +48,12 @@
     "preview": "vite preview",
     "test": "vitest",
     "test:run": "vitest run",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "docs:dev": "npm run dev --prefix docs",
+    "docs:build": "npm run build --prefix docs",
+    "prepublishOnly": "npm run test:run && npm run build"
   },
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0",
@@ -53,6 +80,17 @@
     "vite": "^7.2.4",
     "vite-plugin-dts": "^4.5.4",
     "vite-plugin-lib-inject-css": "^2.2.2",
-    "vitest": "^4.0.17"
+    "vitest": "^4.0.17",
+    "storybook": "^10.1.11",
+    "@storybook/react-vite": "^10.1.11",
+    "@chromatic-com/storybook": "^5.0.0",
+    "@storybook/addon-vitest": "^10.1.11",
+    "@storybook/addon-a11y": "^10.1.11",
+    "@storybook/addon-docs": "^10.1.11",
+    "@storybook/addon-onboarding": "^10.1.11",
+    "eslint-plugin-storybook": "^10.1.11",
+    "playwright": "^1.57.0",
+    "@vitest/browser-playwright": "^4.0.17",
+    "@vitest/coverage-v8": "^4.0.17"
   }
 }

@@ -1,0 +1,66 @@
+---
+title: Layout Primitives
+description: Every Layout に基づいた React レイアウトコンポーネントライブラリ
+template: splash
+hero:
+  tagline: メディアクエリなしで、CSSの本来の力を活用したレスポンシブレイアウトを実現
+  actions:
+    - text: はじめる
+      link: /guides/introduction/
+      icon: right-arrow
+      variant: primary
+    - text: GitHub
+      link: https://github.com/martians-sheep/layout-primitives
+      icon: external
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## 特徴
+
+<CardGrid stagger>
+  <Card title="Intrinsic Design" icon="rocket">
+    メディアクエリに頼らず、CSSの本来の力（flexbox、grid、CSS Custom Properties）を活用した設計。
+  </Card>
+  <Card title="コンポジション" icon="puzzle">
+    シンプルなプリミティブを組み合わせて、複雑なレイアウトを構築。
+  </Card>
+  <Card title="TypeScript対応" icon="document">
+    完全な型定義付き。エディタでの補完やエラーチェックをサポート。
+  </Card>
+  <Card title="Tree-shakable" icon="seti:folder">
+    コンポーネントごとにCSSが分離されており、使用するものだけがバンドルに含まれます。
+  </Card>
+</CardGrid>
+
+## プリミティブ一覧
+
+<CardGrid>
+  <Card title="Stack" icon="bars-3">
+    垂直方向に要素を積み重ねる
+  </Card>
+  <Card title="Box" icon="seti:folder">
+    パディングとボーダーを持つコンテナ
+  </Card>
+  <Card title="Center" icon="seti:html">
+    水平中央揃え + 最大幅の制限
+  </Card>
+  <Card title="Cluster" icon="list-format">
+    フレキシブルにラップするアイテム群
+  </Card>
+  <Card title="Grid" icon="seti:folder">
+    CSS Grid による自動レイアウト
+  </Card>
+  <Card title="Sidebar" icon="seti:folder">
+    2カラムレイアウト
+  </Card>
+  <Card title="Switcher" icon="seti:folder">
+    閾値ベースのレイアウト切り替え
+  </Card>
+  <Card title="Cover" icon="seti:folder">
+    全画面高さ + 中央配置
+  </Card>
+  <Card title="Frame" icon="seti:folder">
+    アスペクト比を維持するコンテナ
+  </Card>
+</CardGrid>
