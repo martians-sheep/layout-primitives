@@ -1,0 +1,17 @@
+.frame {
+  aspect-ratio: var(--frame-ratio, var(--ratio-widescreen));
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frame > img,
+.frame > video,
+.frame > iframe,
+.frame > object,
+.frame > embed {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
