@@ -1,0 +1,31 @@
+.switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--switcher-gap, var(--s-md));
+}
+
+.switcher > * {
+  flex-grow: 1;
+  flex-basis: calc((var(--switcher-threshold, 30rem) - 100%) * 999);
+}
+
+/* Limit the number of items that appear in a row */
+.switcher[data-limit='2'] > :nth-last-child(n + 3),
+.switcher[data-limit='2'] > :nth-last-child(n + 3) ~ * {
+  flex-basis: 100%;
+}
+
+.switcher[data-limit='3'] > :nth-last-child(n + 4),
+.switcher[data-limit='3'] > :nth-last-child(n + 4) ~ * {
+  flex-basis: 100%;
+}
+
+.switcher[data-limit='4'] > :nth-last-child(n + 5),
+.switcher[data-limit='4'] > :nth-last-child(n + 5) ~ * {
+  flex-basis: 100%;
+}
+
+.switcher[data-limit='5'] > :nth-last-child(n + 6),
+.switcher[data-limit='5'] > :nth-last-child(n + 6) ~ * {
+  flex-basis: 100%;
+}

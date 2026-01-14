@@ -1,0 +1,12 @@
+.box {
+  padding: var(--box-padding, var(--s-md));
+  border-width: var(--box-border-width, 0);
+  border-style: solid;
+  border-color: var(--box-border-color, currentColor);
+}
+
+/* Invert colors variant */
+.box[data-invert] {
+  background-color: var(--box-invert-bg, #000);
+  color: var(--box-invert-color, #fff);
+}

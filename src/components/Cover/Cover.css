@@ -1,0 +1,25 @@
+.cover {
+  display: flex;
+  flex-direction: column;
+  min-block-size: var(--cover-min-height, 100vh);
+  padding: var(--cover-padding, var(--s-md));
+}
+
+/* Center the principal element (marked with data-centered) */
+.cover > [data-centered] {
+  margin-block: auto;
+}
+
+/* First and last elements stick to top/bottom */
+.cover > :first-child:not([data-centered]) {
+  margin-block-start: 0;
+}
+
+.cover > :last-child:not([data-centered]) {
+  margin-block-end: 0;
+}
+
+/* No padding variant */
+.cover[data-no-pad] {
+  padding: 0;
+}

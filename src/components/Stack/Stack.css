@@ -1,0 +1,41 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* The "owl" selector - core Every Layout pattern
+   Adds margin to every element except the first */
+.stack > * + * {
+  margin-block-start: var(--stack-space, var(--s-md));
+}
+
+/* Recursive variant - applies spacing to all descendants */
+.stack[data-recursive] * + * {
+  margin-block-start: var(--stack-space, var(--s-md));
+}
+
+/* Split after - pushes elements after nth child to the bottom */
+.stack[data-split-after] {
+  block-size: 100%;
+}
+
+.stack[data-split-after='1'] > :nth-child(1) {
+  margin-block-end: auto;
+}
+
+.stack[data-split-after='2'] > :nth-child(2) {
+  margin-block-end: auto;
+}
+
+.stack[data-split-after='3'] > :nth-child(3) {
+  margin-block-end: auto;
+}
+
+.stack[data-split-after='4'] > :nth-child(4) {
+  margin-block-end: auto;
+}
+
+.stack[data-split-after='5'] > :nth-child(5) {
+  margin-block-end: auto;
+}
