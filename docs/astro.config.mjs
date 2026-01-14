@@ -4,6 +4,8 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://martians-sheep.github.io',
+	base: '/layout-primitives',
 	integrations: [
 		starlight({
 			title: 'Layout Primitives',
