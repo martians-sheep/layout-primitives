@@ -14,7 +14,7 @@ hero:
       icon: external
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
 
 ## 特徴
 
@@ -36,31 +36,13 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 ## プリミティブ一覧
 
 <CardGrid>
-  <Card title="Stack" icon="bars-3" href="/layout-primitives/components/stack/">
-    垂直方向に要素を積み重ねる
-  </Card>
-  <Card title="Box" icon="seti:folder" href="/layout-primitives/components/box/">
-    パディングとボーダーを持つコンテナ
-  </Card>
-  <Card title="Center" icon="seti:html" href="/layout-primitives/components/center/">
-    水平中央揃え + 最大幅の制限
-  </Card>
-  <Card title="Cluster" icon="list-format" href="/layout-primitives/components/cluster/">
-    フレキシブルにラップするアイテム群
-  </Card>
-  <Card title="Grid" icon="seti:folder" href="/layout-primitives/components/grid/">
-    CSS Grid による自動レイアウト
-  </Card>
-  <Card title="Sidebar" icon="seti:folder" href="/layout-primitives/components/sidebar/">
-    2カラムレイアウト
-  </Card>
-  <Card title="Switcher" icon="seti:folder" href="/layout-primitives/components/switcher/">
-    閾値ベースのレイアウト切り替え
-  </Card>
-  <Card title="Cover" icon="seti:folder" href="/layout-primitives/components/cover/">
-    全画面高さ + 中央配置
-  </Card>
-  <Card title="Frame" icon="seti:folder" href="/layout-primitives/components/frame/">
-    アスペクト比を維持するコンテナ
-  </Card>
+  <LinkCard title="Stack" description="垂直方向に要素を積み重ねる" href="/layout-primitives/components/stack/" />
+  <LinkCard title="Box" description="パディングとボーダーを持つコンテナ" href="/layout-primitives/components/box/" />
+  <LinkCard title="Center" description="水平中央揃え + 最大幅の制限" href="/layout-primitives/components/center/" />
+  <LinkCard title="Cluster" description="フレキシブルにラップするアイテム群" href="/layout-primitives/components/cluster/" />
+  <LinkCard title="Grid" description="CSS Grid による自動レイアウト" href="/layout-primitives/components/grid/" />
+  <LinkCard title="Sidebar" description="2カラムレイアウト" href="/layout-primitives/components/sidebar/" />
+  <LinkCard title="Switcher" description="閾値ベースのレイアウト切り替え" href="/layout-primitives/components/switcher/" />
+  <LinkCard title="Cover" description="全画面高さ + 中央配置" href="/layout-primitives/components/cover/" />
+  <LinkCard title="Frame" description="アスペクト比を維持するコンテナ" href="/layout-primitives/components/frame/" />
 </CardGrid>
